@@ -38,6 +38,8 @@ public class tk2dUIItemEditor : Editor
 
         btn.isHoverEnabled = EditorGUILayout.Toggle("Is Hover Events Enabled?", btn.isHoverEnabled);
 
+		btn.triggerEventName = EditorGUILayout.TextField ("Trigger Event", btn.triggerEventName);
+
         btn.sendMessageTarget = methodBindingUtil.BeginMessageGUI(btn.sendMessageTarget);
         methodBindingUtil.MethodBinding( "On Down", typeof(tk2dUIItem), btn.sendMessageTarget, ref btn.SendMessageOnDownMethodName );
         methodBindingUtil.MethodBinding( "On Up", typeof(tk2dUIItem), btn.sendMessageTarget, ref btn.SendMessageOnUpMethodName );

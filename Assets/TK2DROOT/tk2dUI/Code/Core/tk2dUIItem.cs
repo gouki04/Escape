@@ -107,6 +107,8 @@ public class tk2dUIItem : MonoBehaviour
     /// </summary>
     public bool isHoverEnabled = false;
 
+	public string triggerEventName = string.Empty;
+
     public Transform[] editorExtraBounds = new Transform[0]; // This is used by the editor to include additional meshes when calculating bounds. Eg. label area in dropdown
     public Transform[] editorIgnoreBounds = new Transform[0]; // This is used by the editor to ignore certain meshes when calculating bounds. Eg. content in scrollable area
     private bool isPressed = false; //need to be listening to OnUp or OnClicked for this to show the current state
